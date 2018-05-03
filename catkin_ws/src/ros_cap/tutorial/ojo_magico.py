@@ -12,8 +12,8 @@ class buscadores(object):
          	#def publicar(self):
 		self.args = args
 		super(buscadores,self).__init__()
-		self.publisher = rospy.Publisher("/duckietown",Image, queue_size=10)
-                self.subscriber = rospy.Subscriber("/usb_cam/image_raw",Image,self.callback)
+		self.publisher = rospy.Publisher("/godduck",Image, queue_size=10)
+                self.subscriber = rospy.Subscriber("/duckiebot/camera_node/image/rect",Image,self.callback)
 		self.bridge = CvBridge()
 		self.image = Image()
 
